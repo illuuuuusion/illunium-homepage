@@ -19,7 +19,7 @@ const sidebarItems = [
       <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
       <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
       <span class="ml-2 min-w-0 truncate text-[0.7rem] tracking-[0.05em] text-ink-dim">
-        illunium-notes / Projekte / Q1 Planning.md
+        illunium-notes / Projekte / Q1 Planning.json
       </span>
     </div>
 
@@ -49,17 +49,17 @@ const sidebarItems = [
             {{ tag }}
           </span>
         </div>
-        <p class="mt-2 font-semibold text-purple-pale">## MVP Features</p>
-        <p class="text-ink-mid">- [ ] Markdown-Editor mit Live-Preview</p>
+        <p class="mt-2 font-semibold text-purple-pale">MVP Features</p>
+        <p class="text-ink-mid">- [ ] BlockNote-Editor mit /-Menü</p>
         <p class="text-ink-mid">
           - [x] Lokale Verschlüsselung via
-          <code class="rounded-[2px] bg-purple-ghost px-1 text-purple-pale">AES-256</code>
+          <code class="rounded-[2px] bg-purple-ghost px-1 text-purple-pale">age / AES-256-GCM</code>
         </p>
-        <p class="text-ink-mid">- [ ] Verlinkungen zwischen Seiten</p>
-        <p class="mt-3 font-semibold text-purple-pale">## Nächste Schritte</p>
+        <p class="text-ink-mid">- [ ] SQLite Storage via tauri-plugin-sql</p>
+        <p class="mt-3 font-semibold text-purple-pale">Nächste Schritte</p>
         <p class="text-ink-mid">
-          Sync-Modul planen — P2P via
-          <code class="rounded-[2px] bg-purple-ghost px-1 text-purple-pale">WebRTC</code>
+          Sync-Modul planen — Snapshots via
+          <code class="rounded-[2px] bg-purple-ghost px-1 text-purple-pale">GitHub API</code>
           <span class="ml-0.5 inline-block h-[0.9em] w-0.5 animate-[blink_1s_step-end_infinite] align-middle bg-purple" />
         </p>
       </div>

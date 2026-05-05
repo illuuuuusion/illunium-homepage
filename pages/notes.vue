@@ -1,9 +1,13 @@
 <script setup lang="ts">
 const pillars = [
-  { num: '01', title: 'Vue + Local State', text: 'Eine schnelle App-Oberfläche, die sich vertraut anfühlt und offline sinnvoll weiterarbeiten kann.' },
-  { num: '02', title: 'AES-256', text: 'Lokale Verschlüsselung steht im Zentrum. Sync ist optional und darf Privacy nicht schwächen.' },
-  { num: '03', title: 'Standard-Exports', text: 'Markdown, JSON und portable Formate bleiben Teil der Produktidee, auch wenn die Website selbst keine Markdown-Dateien nutzt.' }
+  { num: '01', title: 'Tauri 2 + Rust', text: 'Performance, kleines Bundle und nativer Zugriff auf Dateisystem und Keychain statt schwerer Electron-Schicht.' },
+  { num: '02', title: 'React + TypeScript', text: 'Vite, Tailwind CSS und shadcn/ui bilden den etablierten Frontend-Stack für den Desktop-MVP.' },
+  { num: '03', title: 'BlockNote + JSON', text: 'Notion-ähnliches /-Menü, eigene Block-Typen und strukturiertes JSON mit Markdown-Import und -Export.' },
+  { num: '04', title: 'SQLite Storage', text: 'Lokale Datenhaltung über tauri-plugin-sql, vorbereitet für schnelle Suche und robuste Offline-Nutzung.' },
+  { num: '05', title: 'Rust Encryption', text: 'Verschlüsselung im Rust-Layer mit age oder AES-256-GCM, Schlüssel sicher im nativen Keychain.' },
+  { num: '06', title: 'Git-Sync zuerst', text: 'Phase 1 speichert Snapshots als JSON in privaten GitHub/GitLab-Repos, später Supabase oder PocketBase.' }
 ]
+
 </script>
 
 <template>
@@ -16,8 +20,8 @@ const pillars = [
             Notizen ohne fremdes Fundament.
           </h1>
           <p class="mb-8 leading-[1.8] text-ink-mid">
-            Illunium Notes ist die Idee einer lokalen, verschlüsselten Notizen-App:
-            vertraut genug für Notion-Nutzer, frei genug für Menschen, die ihre Daten behalten wollen.
+            Illunium Notes ist ein kleiner MVP für eine lokale, verschlüsselte Desktop-Notizen-App:
+            Tauri 2 im Backend, React und TypeScript im Frontend, BlockNote als Editor und SQLite als Speicher.
           </p>
           <NuxtLink to="/community" class="inline-block rounded-[2px] bg-purple px-8 py-3 font-mono text-tag uppercase tracking-[0.08em] text-white no-underline transition-all hover:-translate-y-px hover:opacity-90">
             Auf dem Laufenden bleiben
@@ -30,8 +34,8 @@ const pillars = [
 
     <section class="relative z-10 border-t border-border bg-void-2 px-5 py-24 sm:px-8 lg:px-12">
       <div class="mx-auto max-w-[1200px]">
-        <SectionLabel v-reveal>Feature-Richtung</SectionLabel>
-        <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <SectionLabel v-reveal>Stack-Entscheidung</SectionLabel>
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           <article
             v-for="pillar in pillars"
             :key="pillar.num"
@@ -46,17 +50,5 @@ const pillars = [
       </div>
     </section>
 
-    <section class="relative z-10 border-t border-border px-5 py-24 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-[900px] text-center">
-        <IlluniumLogo v-reveal :size="72" class="mx-auto mb-8 text-purple" />
-        <h2 v-reveal class="mb-5 font-head text-[2rem] font-bold sm:text-[3rem]">
-          Privacy-first ist die Produktentscheidung.
-        </h2>
-        <p v-reveal class="mx-auto max-w-[62ch] leading-[1.8] text-ink-mid">
-          Notes soll nicht noch ein Ort werden, an dem private Gedanken als Cloud-Footprint enden.
-          Der MVP fokussiert deshalb Editor, lokale Datenhaltung, Verschlüsselung und klare Exportwege.
-        </p>
-      </div>
-    </section>
   </div>
 </template>

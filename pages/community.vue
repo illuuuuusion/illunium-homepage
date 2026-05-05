@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const team = [
   { name: 'Jamie', role: 'Founder / Builder', text: 'Baut Website, Tools, Automatisierung und die langfristige Richtung von Illunium.' },
-  { name: 'Mod-Pseudonym', role: 'Community Support', text: 'Hilft dort, wo menschlicher Kontext mehr zählt als Automatisierung.' }
+  { name: 'DontMindMe', role: 'Community Support', text: 'Hilft dort, wo menschlicher Kontext mehr zählt als Automatisierung <3.' }
 ]
 
 const values = [

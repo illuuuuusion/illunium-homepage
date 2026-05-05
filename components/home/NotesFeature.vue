@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const points = [
-  { label: 'Local-first & verschlüsselt', text: 'Deine Notizen verlassen dein Gerät nur, wenn du es willst. Kein Abo-Modell, kein Vendor Lock-in.' },
-  { label: 'Notion-kompatibles UI', text: 'Datenbanken, verlinkte Seiten, Kanban-Boards — alles out-of-the-box, keine Plugins vorab nötig.' },
-  { label: 'Standard-Formate', text: 'Markdown, JSON, Export zu gängigen Formaten. Keine proprietären Strukturen, die dich einschließen.' },
-  { label: 'Performance-first', text: '10.000 Notizen laden genauso schnell wie zehn — gebaut mit diesem Anspruch von Anfang an.' }
+  { label: 'Tauri 2 statt Electron', text: 'Rust-Backend, kleines Bundle und nativer Zugriff auf Dateisystem und Keychain.' },
+  { label: 'React + TypeScript', text: 'Vite, Tailwind CSS und shadcn/ui bilden den Frontend-Stack für einen sauberen MVP.' },
+  { label: 'BlockNote Editor', text: 'Notion-typisches /-Menü, eigene Block-Typen und strukturiertes JSON statt reinem Markdown.' },
+  { label: 'SQLite + Verschlüsselung', text: 'Lokale Speicherung via tauri-plugin-sql, Schlüssel im nativen Keychain, Verschlüsselung im Rust-Layer.' }
 ]
 </script>
 
@@ -19,9 +19,9 @@ const points = [
           Notes — denken wie du willst, sicher wie du brauchst.
         </h2>
         <p class="mb-10 leading-[1.8] text-ink-mid">
-          Notion ist mächtig, aber deine Daten leben auf fremden Servern. Obsidian ist privat,
-          aber der Start ist rau. Illunium Notes baut eine dritte Option: lokal-first,
-          out-of-the-box kompatibel, schnell.
+          Illunium Notes startet als kleiner Desktop-MVP. Der Fokus liegt auf lokalem Arbeiten,
+          nativer Sicherheit und einem Editor, der sich wie moderne Workspace-Tools anfühlt,
+          ohne ein schweres Electron-Bundle mitzuschleppen.
         </p>
         <div class="flex flex-col gap-5">
           <div v-for="p in points" :key="p.label" class="flex items-start gap-4">

@@ -15,7 +15,7 @@ const projects: Array<{
   status: ProjectStatus
   desc: string
 }> = [
-  { num: '01', name: 'Illunium Notes', tag: 'App', status: 'building', desc: 'Privacy-first Notizen-App mit lokalem Speicher, vertrauten Editor-Mustern und optionalem Sync.' },
+  { num: '01', name: 'Illunium Notes', tag: 'App', status: 'building', desc: 'Kleiner MVP einer Desktop-Notizen-App mit Tauri 2, React, TypeScript, BlockNote, SQLite und lokaler Verschlüsselung.' },
   { num: '02', name: 'Discord Bot', tag: 'Bot', status: 'building', desc: 'Automatisierung für Rollen, Events, Moderation und kleine Community-Workflows.' },
   { num: '03', name: 'Webhosting', tag: 'Infra', status: 'active', desc: 'Self-hosted Infrastruktur für Projektseiten, Experimente und interne Tools.' },
   { num: '04', name: 'Minecraft Server', tag: 'Gaming', status: 'ondemand', desc: 'Custom-Server für Events und Tests, bewusst nicht permanent online.' },
@@ -25,9 +25,9 @@ const projects: Array<{
 
 const roadmap = [
   { when: 'Q2 2026', title: 'Website MVP', text: 'Statische Pages, Projektübersicht, Notes-Feature und Community-CTA veröffentlichen.' },
-  { when: 'Q3 2026', title: 'Bot-Fundament', text: 'Discord-Automation für Rollen, Events und wiederkehrende Server-Aufgaben stabilisieren.' },
-  { when: 'Q4 2026', title: 'Notes Prototype', text: 'Editor, lokale Verschlüsselung und erste Import-/Export-Strecken testen.' },
-  { when: '2027', title: 'Gaming Layer', text: 'Minecraft-Events und Hytale-Vorbereitung als on-demand Community-Angebote ausbauen.' }
+  { when: 'Q2 2026', title: 'Bot-Fundament', text: 'Discord-Automation für Rollen, Events und wiederkehrende Server-Aufgaben als technische Basis stabilisieren.' },
+  { when: 'Q2-Q3 2026', title: 'Notes Prototype', text: 'Tauri-Desktop-MVP mit BlockNote-Editor, SQLite-Speicher, Rust-Verschlüsselung und erstem Git-basierten Sync prototypisieren.' },
+  { when: 'Q3 2026 - Q2 2027', title: 'Gaming Layer', text: 'Minecraft-Events und Hytale-Vorbereitung als on-demand Community-Angebote ausbauen.' }
 ]
 
 const filteredProjects = computed(() => {
@@ -42,7 +42,7 @@ const filteredProjects = computed(() => {
 <template>
   <div class="pt-28">
     <section class="relative z-10 border-b border-border px-5 py-20 sm:px-8 lg:px-12">
-      <div class="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+      <div class="mx-auto max-w-[1200px]">
         <div v-reveal>
           <SectionLabel>Projektübersicht</SectionLabel>
           <h1 class="mb-6 font-head text-[2.5rem] font-extrabold leading-[1] sm:text-[4.5rem]">
@@ -51,12 +51,6 @@ const filteredProjects = computed(() => {
           <p class="max-w-[58ch] leading-[1.8] text-ink-mid">
             Illunium wächst über kleine, klar abgegrenzte Projekte: Apps, Infrastruktur,
             Gaming-Ideen und Automatisierung, die echte Arbeit aus dem Weg räumt.
-          </p>
-        </div>
-        <div v-reveal class="reveal-d1 border border-border bg-void-2 p-6">
-          <p class="mb-2 font-mono text-tag uppercase tracking-[0.14em] text-purple">Status</p>
-          <p class="text-[0.95rem] leading-[1.7] text-ink-mid">
-            Kein dynamisches Routing, keine Slugs, kein Content-System. Diese Seite liest ihre Daten direkt aus Vue SFC State.
           </p>
         </div>
       </div>

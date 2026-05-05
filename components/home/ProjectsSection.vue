@@ -9,7 +9,7 @@ const projects: Array<{
   status: ProjectStatus
   to: string
 }> = [
-  { num: '01', name: 'Illunium Notes', desc: 'Die Notizen-App — Notion trifft Obsidian, privacy-first.', tag: 'App', status: 'building', to: '/notes' },
+  { num: '01', name: 'Illunium Notes', desc: 'Tauri-Desktop-App mit BlockNote, SQLite, Keychain und verschlüsseltem lokalen Speicher.', tag: 'App', status: 'building', to: '/notes' },
   { num: '02', name: 'Discord Bot', desc: 'Serverautomatisierung, Moderation, Community-Tools.', tag: 'Bot', status: 'building', to: '/projekte' },
   { num: '03', name: 'Webhosting', desc: 'Self-hosted Webserver-Infrastruktur für Community-Projekte.', tag: 'Infra', status: 'active', to: '/projekte' },
   { num: '04', name: 'Minecraft Server', desc: 'Custom-Server mit Events und Community-Features.', tag: 'Gaming', status: 'ondemand', to: '/projekte' },
