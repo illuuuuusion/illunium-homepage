@@ -1,0 +1,6 @@
+import { defineNuxtPlugin } from '#app'
+import { vReveal } from '~/composables/useReveal'
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.directive('reveal', vReveal)
+})
